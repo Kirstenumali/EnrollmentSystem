@@ -1,6 +1,7 @@
 package com.enrollmentsystem.pro.business;
 import com.enrollmentsystem.pro.dataaccess.UserDao;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class UserService {
 
@@ -30,10 +31,12 @@ public class UserService {
     }
 
     public ArrayList addUser() {
-        UserDao userDao = new UserDao();
-
-        ArrayList users = userDao.addUser();
-        return users;
+        System.out.println("Enter the name of the user");
+        Scanner scanner = new Scanner(System.in);
+        scanner.next();
+//        UserDao userDao = new UserDao();
+//        ArrayList users = userDao.addUser();
+        return null;
 
     }
 
