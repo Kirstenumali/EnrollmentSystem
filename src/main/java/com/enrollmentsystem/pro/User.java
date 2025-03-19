@@ -1,11 +1,17 @@
 package com.enrollmentsystem.pro;
 
 
+import java.util.Scanner;
+
 public class User {
     private String name;
 
-    public String getName() {
-        return name;
+    public void getName() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Please enter a username: ");
+        String name = scanner.nextLine();
+        System.out.println("Hello," + name);
+        scanner.close();
     }
 
     public void setName(String name) {

@@ -1,8 +1,5 @@
 package com.enrollmentsystem.pro.business;
-
-import com.enrollmentsystem.pro.User;
-import com.enrollmentsystem.pro.userinterface.Menu;
-
+import com.enrollmentsystem.pro.dataaccess.UserDao;
 import java.util.ArrayList;
 
 public class UserService {
@@ -10,7 +7,8 @@ public class UserService {
     public void doActionOnUserGetANumber(int selectedOperationCode) {
         if (selectedOperationCode == 1) {
             // TODO add user
-            addUser();
+            ArrayList addAUser = addUser();
+            System.out.println(addAUser);
 
         }
         else if (selectedOperationCode == 2) {
@@ -31,8 +29,12 @@ public class UserService {
         }
     }
 
-    public void addUser() {
-        System.out.println("A new user has been created");
+    public ArrayList addUser() {
+        UserDao userDao = new UserDao();
+
+        ArrayList users = userDao.addUser();
+        return users;
+
     }
 
     public void editUser() {
@@ -44,21 +46,10 @@ public class UserService {
     }
 
     public ArrayList getAllRegisteredUsers() {
-        ArrayList users = new ArrayList();
-        User user1 = new User();
-        user1.setName("John");
-        users.add(user1);
 
-        User user2 = new User();
-        user2.setName("Jane");
-        users.add(user2);
+        UserDao userDao = new UserDao();
 
-        User user3 = new User();
-        user3.setName("Bob");
-        users.add(user3);
-
-        System.out.println("All registered users have been created");
-
+        ArrayList users = userDao.getAllUser();
         return users;
     }
 }
