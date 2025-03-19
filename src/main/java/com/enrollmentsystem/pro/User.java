@@ -6,12 +6,9 @@ import java.util.Scanner;
 public class User {
     private String name;
 
-    public void getName() {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Please enter a username: ");
-        String name = scanner.next();
-        System.out.println("Hello," + name);
-        scanner.close();
+    // THIS method are accessor
+    public String getName() {
+        return name;
     }
 
     public void setName(String name) {

@@ -1,15 +1,18 @@
 package com.enrollmentsystem.pro.business;
+import com.enrollmentsystem.pro.User;
 import com.enrollmentsystem.pro.dataaccess.UserDao;
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class UserService {
+    private UserDao userDao;
 
     public void doActionOnUserGetANumber(int selectedOperationCode) {
         if (selectedOperationCode == 1) {
             // TODO add user
-            ArrayList addAUser = addUser();
-            System.out.println(addAUser);
+            addUser();
+            ArrayList result = getAllRegisteredUsers();
+            System.out.println(result);
 
         }
         else if (selectedOperationCode == 2) {
@@ -30,14 +33,19 @@ public class UserService {
         }
     }
 
-    public ArrayList addUser() {
+    public void addUser() {
         System.out.println("Enter the name of the user");
         Scanner scanner = new Scanner(System.in);
-        scanner.next();
-//        UserDao userDao = new UserDao();
-//        ArrayList users = userDao.addUser();
-        return null;
-
+        String userName = scanner.next();
+        System.out.println("Your username is " + userName);
+        scanner.close();
+        User newUser = new User();
+        newUser.setName(userName);
+        if (userDao == null) {
+            UserDao newUserDao = new UserDao();
+            userDao = newUserDao;
+        }
+        userDao.addUser(newUser);
     }
 
     public void editUser() {
@@ -49,9 +57,10 @@ public class UserService {
     }
 
     public ArrayList getAllRegisteredUsers() {
-
-        UserDao userDao = new UserDao();
-
+        if (userDao == null) {
+            UserDao newUserDao = new UserDao();
+            userDao = newUserDao;
+        }
         ArrayList users = userDao.getAllUser();
         return users;
     }
