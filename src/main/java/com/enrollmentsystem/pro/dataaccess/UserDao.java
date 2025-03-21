@@ -1,6 +1,8 @@
 package com.enrollmentsystem.pro.dataaccess;
 
 import com.enrollmentsystem.pro.User;
+import com.enrollmentsystem.pro.userinterface.Menu;
+
 import java.util.ArrayList;
 
 public class UserDao {
@@ -27,12 +29,13 @@ public class UserDao {
 //        userDatabase.add(user3);
 //
 //        System.out.println("All registered users have been created");
-
         return userDatabase;
+
     }
 
     public void addUser(User newUser) {
         userDatabase.add(newUser);
+
 
     }
 }
