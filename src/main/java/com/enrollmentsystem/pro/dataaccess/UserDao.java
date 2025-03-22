@@ -4,6 +4,7 @@ import com.enrollmentsystem.pro.User;
 import com.enrollmentsystem.pro.userinterface.Menu;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class UserDao {
 
@@ -41,7 +42,9 @@ public class UserDao {
 
     public void addUser(User newUser) {
         userDatabase.add(newUser);
+    }
 
-
+    public void deleteUser(int itemIndex) {
+        userDatabase.remove(itemIndex);
     }
 }

@@ -25,12 +25,10 @@ public class Menu {
         // TODO get a string and check must be between 1 and 5
         int choice = scanner.nextInt();
         System.out.println("You have selected the number: " + choice);
-
         userService.doActionOnUserGetANumber(choice);
 
         if (choice == 1) {
             showMenu();
-
         } else if (choice == 2) {
             showMenu();
         } else if (choice == 3) {
@@ -43,7 +41,6 @@ public class Menu {
         } else {
             System.out.println("Invalid choice, please select a valid option (1-5).");
         }
-
         scanner.close();
     }
 }
