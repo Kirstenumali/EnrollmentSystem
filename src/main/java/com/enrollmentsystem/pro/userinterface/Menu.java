@@ -23,24 +23,23 @@ public class Menu {
         System.out.println("5. Exit");
 
         // TODO get a string and check must be between 1 and 5
-        int choice = scanner.nextInt();
+        String choice = scanner.next();
         System.out.println("You have selected the number: " + choice);
-        userService.doActionOnUserGetANumber(choice);
+//        checkInputValue(choice);
+        if (choice.equals("1") || choice.equals("2") || choice.equals("3") || choice.equals("4")) {
+        userService.doActionOnUserGetANumber(Integer.parseInt(choice));
 
-        if (choice == 1) {
-            showMenu();
-        } else if (choice == 2) {
-            showMenu();
-        } else if (choice == 3) {
-            showMenu();
-        } else if (choice == 4) {
-            showMenu();
-        } else if (choice == 5) {
+        } else if (choice.equals("5")) {
             System.out.println("Exiting the program...");
             scanner.close();
         } else {
-            System.out.println("Invalid choice, please select a valid option (1-5).");
+            System.out.println("Input value is not acceptable. Please enter a number (1-5)");
         }
+        showMenu();
         scanner.close();
     }
+
+//    private void checkInputValue(String choice) {
+//
+//    }
 }
