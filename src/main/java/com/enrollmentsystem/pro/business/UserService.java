@@ -38,7 +38,8 @@ public class UserService {
         }
         userDao.addUser(newUser);
         ArrayList result = getAllRegisteredUsers();
-        System.out.println(result);}
+        System.out.println(result);
+    }
 
     public void editUser() {
         System.out.println("Please enter the location of item");
