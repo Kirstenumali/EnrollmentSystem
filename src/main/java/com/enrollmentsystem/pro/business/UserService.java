@@ -52,7 +52,17 @@ public class UserService {
     }
 
     public void editUser() {
-        System.out.println("A new user has been updated");
+        System.out.println("Please enter the location of item");
+        Scanner scanner = new Scanner(System.in);
+        String itemIndex = scanner.nextLine();
+        System.out.println("Your item location is " + itemIndex);
+        System.out.println("Please enter your new name");
+        String newUserName = scanner.nextLine();
+        System.out.println("Your new username is: " + newUserName);
+        if (userDao == null) {
+            userDao = new UserDao();
+        }
+        userDao.updateUser(Integer.parseInt(itemIndex), newUserName);
     }
 
     public void exitUser() {

@@ -22,11 +22,11 @@ public class Menu {
         System.out.println("4. View all registered users");
         System.out.println("5. Exit");
 
+        // TODO get a string and check must be between 1 and 5
         int choice = scanner.nextInt();
         System.out.println("You have selected the number: " + choice);
 
         userService.doActionOnUserGetANumber(choice);
-
 
         if (choice == 1) {
             showMenu();

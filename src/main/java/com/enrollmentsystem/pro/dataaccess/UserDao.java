@@ -33,6 +33,12 @@ public class UserDao {
 
     }
 
+    public void updateUser(int itemIndex, String newUserName) {
+        User user = userDatabase.get(itemIndex);
+        user.setName(newUserName);
+        userDatabase.set(itemIndex, user);
+    }
+
     public void addUser(User newUser) {
         userDatabase.add(newUser);
 
