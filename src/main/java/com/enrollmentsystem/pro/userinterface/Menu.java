@@ -1,7 +1,5 @@
 package com.enrollmentsystem.pro.userinterface;
-
 import com.enrollmentsystem.pro.business.UserService;
-
 import java.util.Scanner;
 
 public class Menu {
@@ -22,16 +20,15 @@ public class Menu {
         System.out.println("4. View all registered users");
         System.out.println("5. Exit");
 
-        // TODO get a string and check must be between 1 and 5
         String choice = scanner.next();
         System.out.println("You have selected the number: " + choice);
 //        checkInputValue(choice);
         if (choice.equals("1") || choice.equals("2") || choice.equals("3") || choice.equals("4")) {
         userService.doActionOnUserGetANumber(Integer.parseInt(choice));
-
         } else if (choice.equals("5")) {
             System.out.println("Exiting the program...");
             scanner.close();
+            return;
         } else {
             System.out.println("Input value is not acceptable. Please enter a number (1-5)");
         }

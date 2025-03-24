@@ -34,11 +34,16 @@ public class UserService {
         User newUser = new User();
         newUser.setName(userName);
         if (userDao == null) {
-            userDao = new UserDao();
-        }
+            userDao = new UserDao();}
+        Boolean isUserExist = userDao.userExist(newUser);
+        if (isUserExist.equals(false)) {
+        System.out.println(isUserExist);
         userDao.addUser(newUser);
         ArrayList result = getAllRegisteredUsers();
         System.out.println(result);
+        } else {
+            System.out.println("Our user is in database");
+        }
     }
 
     public void editUser() {

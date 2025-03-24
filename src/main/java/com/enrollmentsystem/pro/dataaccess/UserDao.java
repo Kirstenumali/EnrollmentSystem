@@ -44,6 +44,11 @@ public class UserDao {
         userDatabase.add(newUser);
     }
 
+    public boolean userExist(User user) {
+        Boolean isExist = userDatabase.contains(user);
+        return isExist;
+    }
+
     public void deleteUser(int itemIndex) {
         userDatabase.remove(itemIndex);
     }
