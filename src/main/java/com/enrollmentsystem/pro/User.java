@@ -1,30 +1,48 @@
 package com.enrollmentsystem.pro;
 
-
 import java.util.Objects;
-import java.util.Scanner;
 
 public class User {
     private String name;
+    private String lastName;
+    private int passportNumber;
 
+    // TODO Find out what is the use of parameter
     // THIS method are accessor
     public String getName() {
         return name;
+    }
+
+    public int getPassportNumber() {
+        return passportNumber;
+    }
+
+    public void setPassportNumber(int passportNumber) {
+        this.passportNumber = passportNumber;
     }
 
     public void setName(String name) {
         this.name = name;
     }
 
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+
     @Override
     public String toString() {
-        return name;
+        return name + " " + lastName + " (" + passportNumber + ")" ;
     }
 
     @Override
     public boolean equals(Object o) {
         if (o == null || getClass() != o.getClass()) return false;
         User user = (User) o;
-        return Objects.equals(name, user.name);
+        return Objects.equals(name, user.name) && Objects.equals(lastName, user.lastName) && Objects.equals(passportNumber, user.passportNumber) ;
     }
 }

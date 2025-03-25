@@ -19,7 +19,7 @@ public class UserService {
         } else if (selectedOperationCode == 4) {
             ArrayList result = getAllRegisteredUsers();
             System.out.println(result);
-        } else if (selectedOperationCode == 5) {
+        } else if (selectedOperationCode == 5)  {
             exitUser();
         } else {
             System.out.println("You must select 1-5 numbers");
@@ -33,8 +33,18 @@ public class UserService {
         System.out.println("Your username is " + userName);
         User newUser = new User();
         newUser.setName(userName);
+        System.out.println("Please enter the last name");
+        String lastName = scanner.nextLine();
+        newUser.setLastName(lastName);
+        System.out.println("Your last name is " + lastName);
+        System.out.println("Please enter your passport number ");
+        Integer passportNumber = Integer.valueOf(scanner.nextLine());
+        newUser.setPassportNumber(passportNumber);
+        System.out.println("Your passport number is " + passportNumber);
+
         if (userDao == null) {
-            userDao = new UserDao();}
+            userDao = new UserDao();
+        }
         Boolean isUserExist = userDao.userExist(newUser);
         if (isUserExist.equals(false)) {
         System.out.println(isUserExist);
@@ -67,7 +77,7 @@ public class UserService {
         System.out.println("What index of user you want to delete?");
         Scanner scanner = new Scanner(System.in);
         int itemIndex = Integer.parseInt(scanner.next());
-        System.out.println("You chose number: " + itemIndex);
+        System.out.println("You chose number:  " + itemIndex);
         int minusIndex = (itemIndex)-1;
         if (userDao == null) {
             userDao = new UserDao();

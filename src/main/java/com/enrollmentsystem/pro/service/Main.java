@@ -8,8 +8,6 @@ public class Main {
         ExamService examService = new ExamService();
         examService.inputNumber(4);
 
-        // TODO push this code in Github
-        // TODO complete the task
         Menu menu = new Menu();
         menu.showMenu();
 

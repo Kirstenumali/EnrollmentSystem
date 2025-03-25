@@ -19,8 +19,8 @@ public class Menu {
         System.out.println("3. Delete a user");
         System.out.println("4. View all registered users");
         System.out.println("5. Exit");
-
         String choice = scanner.next();
+
         System.out.println("You have selected the number: " + choice);
 //        checkInputValue(choice);
         if (choice.equals("1") || choice.equals("2") || choice.equals("3") || choice.equals("4")) {
@@ -35,8 +35,4 @@ public class Menu {
         showMenu();
         scanner.close();
     }
-
-//    private void checkInputValue(String choice) {
-//
-//    }
 }
