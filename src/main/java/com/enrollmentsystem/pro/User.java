@@ -7,7 +7,6 @@ public class User {
     private String lastName;
     private int passportNumber;
 
-    // TODO Find out what is the use of parameter
     // THIS method are accessor
     public String getName() {
         return name;
@@ -33,11 +32,6 @@ public class User {
         this.lastName = lastName;
     }
 
-
-    @Override
-    public String toString() {
-        return name + " " + lastName + " (" + passportNumber + ")" ;
-    }
 
     @Override
     public boolean equals(Object o) {

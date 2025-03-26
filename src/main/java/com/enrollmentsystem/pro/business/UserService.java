@@ -41,7 +41,6 @@ public class UserService {
         Integer passportNumber = Integer.valueOf(scanner.nextLine());
         newUser.setPassportNumber(passportNumber);
         System.out.println("Your passport number is " + passportNumber);
-
         if (userDao == null) {
             userDao = new UserDao();
         }
