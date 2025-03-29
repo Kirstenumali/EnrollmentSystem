@@ -1,5 +1,6 @@
 package com.enrollmentsystem.pro.service;
 
+import javax.swing.*;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -40,15 +41,15 @@ public class ExamService {
       public void printNumbers() {
           ArrayList<Integer> myNumbers = new ArrayList<>();
           myNumbers.add(5);
-          myNumbers.add(3);
+          myNumbers.add(-1);
           myNumbers.add(5);
           myNumbers.add(100);
-          myNumbers.add(4);
+          myNumbers.add(-4);
           myNumbers.add(6);
           myNumbers.add(7);
           myNumbers.add(8);
           myNumbers.add(9);
-          myNumbers.add(-10);
+          myNumbers.add(1000);
           myNumbers.add(11);
           myNumbers.add(12);
           myNumbers.add(13);
@@ -98,7 +99,7 @@ public class ExamService {
           myNumbers.add(57);
           myNumbers.add(58);
           myNumbers.add(59);
-          myNumbers.add(60);
+          myNumbers.add(1400);
           myNumbers.add(62);
           myNumbers.add(63);
           myNumbers.add(64);
@@ -138,129 +139,26 @@ public class ExamService {
           myNumbers.add(99);
           myNumbers.add(101);
           myNumbers.add(103);
-          myNumbers.add(104);
-//
-//          System.out.println(myNumbers.get(0));
-//          System.out.println(myNumbers.get(1));
-//          System.out.println(myNumbers.get(2));
-//          System.out.println(myNumbers.get(3));
-//          System.out.println(myNumbers.get(4));
-//          System.out.println(myNumbers.get(5));
-//          System.out.println(myNumbers.get(6));
-//          System.out.println(myNumbers.get(7));
-//          System.out.println(myNumbers.get(8));
-//          System.out.println(myNumbers.get(9));
-//          System.out.println(myNumbers.get(10));
-//          System.out.println(myNumbers.get(11));
-//          System.out.println(myNumbers.get(12));
-//          System.out.println(myNumbers.get(13));
-//          System.out.println(myNumbers.get(14));
-//          System.out.println(myNumbers.get(15));
-//          System.out.println(myNumbers.get(16));
-//          System.out.println(myNumbers.get(17));
-//          System.out.println(myNumbers.get(18));
-//          System.out.println(myNumbers.get(19));
-//          System.out.println(myNumbers.get(20));
-//          System.out.println(myNumbers.get(21));
-//          System.out.println(myNumbers.get(22));
-//          System.out.println(myNumbers.get(23));
-//          System.out.println(myNumbers.get(24));
-//          System.out.println(myNumbers.get(25));
-//          System.out.println(myNumbers.get(26));
-//          System.out.println(myNumbers.get(27));
-//          System.out.println(myNumbers.get(28));
-//          System.out.println(myNumbers.get(29));
-//          System.out.println(myNumbers.get(30));
-//          System.out.println(myNumbers.get(31));
-//          System.out.println(myNumbers.get(32));
-//          System.out.println(myNumbers.get(33));
-//          System.out.println(myNumbers.get(34));
-//          System.out.println(myNumbers.get(35));
-//          System.out.println(myNumbers.get(36));
-//          System.out.println(myNumbers.get(37));
-//          System.out.println(myNumbers.get(38));
-//          System.out.println(myNumbers.get(39));
-//          System.out.println(myNumbers.get(40));
-//          System.out.println(myNumbers.get(41));
-//          System.out.println(myNumbers.get(42));
-//          System.out.println(myNumbers.get(43));
-//          System.out.println(myNumbers.get(44));
-//          System.out.println(myNumbers.get(45));
-//          System.out.println(myNumbers.get(46));
-//          System.out.println(myNumbers.get(47));
-//          System.out.println(myNumbers.get(48));
-//          System.out.println(myNumbers.get(49));
-//          System.out.println(myNumbers.get(50));
-//          System.out.println(myNumbers.get(51));
-//          System.out.println(myNumbers.get(52));
-//          System.out.println(myNumbers.get(53));
-//          System.out.println(myNumbers.get(54));
-//          System.out.println(myNumbers.get(55));
-//          System.out.println(myNumbers.get(56));
-//          System.out.println(myNumbers.get(57));
-//          System.out.println(myNumbers.get(58));
-//          System.out.println(myNumbers.get(59));
-//          System.out.println(myNumbers.get(60));
-//          System.out.println(myNumbers.get(61));
-//          System.out.println(myNumbers.get(62));
-//          System.out.println(myNumbers.get(63));
-//          System.out.println(myNumbers.get(64));
-//          System.out.println(myNumbers.get(65));
-//          System.out.println(myNumbers.get(66));
-//          System.out.println(myNumbers.get(67));
-//          System.out.println(myNumbers.get(68));
-//          System.out.println(myNumbers.get(69));
-//          System.out.println(myNumbers.get(70));
-//          System.out.println(myNumbers.get(71));
-//          System.out.println(myNumbers.get(72));
-//          System.out.println(myNumbers.get(73));
-//          System.out.println(myNumbers.get(74));
-//          System.out.println(myNumbers.get(75));
-//          System.out.println(myNumbers.get(76));
-//          System.out.println(myNumbers.get(77));
-//          System.out.println(myNumbers.get(78));
-//          System.out.println(myNumbers.get(79));
-//          System.out.println(myNumbers.get(80));
-//          System.out.println(myNumbers.get(81));
-//          System.out.println(myNumbers.get(82));
-//          System.out.println(myNumbers.get(83));
-//          System.out.println(myNumbers.get(84));
-//          System.out.println(myNumbers.get(85));
-//          System.out.println(myNumbers.get(86));
-//          System.out.println(myNumbers.get(87));
-//          System.out.println(myNumbers.get(88));
-//          System.out.println(myNumbers.get(89));
-//          System.out.println(myNumbers.get(90));
-//          System.out.println(myNumbers.get(91));
-//          System.out.println(myNumbers.get(92));
-//          System.out.println(myNumbers.get(93));
-//          System.out.println(myNumbers.get(94));
-//          System.out.println(myNumbers.get(95));
-//          System.out.println(myNumbers.get(96));
-//          System.out.println(myNumbers.get(97));
-//          System.out.println(myNumbers.get(98));
-//          System.out.println(myNumbers.get(99));
+          myNumbers.add(1300);
 
-          Integer index = 0;
-          Integer endIndex = 99;
+          int maxNumber = myNumbers.get(0);
+          int minimumNumber = myNumbers.get(0);
 
-
-
-//          while (index <= endIndex) {
-//              System.out.println(myNumbers.get(index));
-//              index = index + 1;
-//          }
-
-          Integer minNumber = myNumbers.get(0);
-          while (index <= endIndex) {
-              Integer itemNumber = myNumbers.get(index);
-              if (itemNumber < minNumber) {
-                 minNumber = itemNumber;
+          for (int counter = 0; counter < myNumbers.size(); counter++) {
+              System.out.println(myNumbers.get(counter));
+          }
+          for (int index = 1; index < myNumbers.size(); index++) {
+              if (minimumNumber > myNumbers.get(index)) {
+                  minimumNumber = myNumbers.get(index);
               }
-              index = index + 1;
+          }
+          for (int index = 1; index < myNumbers.size(); index++) {
+             if (maxNumber < myNumbers.get(index)) {
+                 maxNumber = myNumbers.get(index);
+             }
+          }
+          System.out.println("Minimum number is: " + minimumNumber);
+          System.out.println("Maximum number is: " + maxNumber);
           }
 
-          System.out.println("Minimum number is " + minNumber);
-          System.out.println("The size is: " + myNumbers.size());
-      }
       }
