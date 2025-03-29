@@ -8,10 +8,5 @@ public class Main {
 
     public static void main(String[] args) {
         ExamService examService = new ExamService();
-        examService.inputNumber(4);
         examService.printNumbers();
-
-        Menu menu = new Menu();
-        menu.showMenu();
-
     }}
