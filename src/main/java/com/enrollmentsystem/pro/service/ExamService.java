@@ -165,9 +165,15 @@ public class ExamService {
           System.out.println("Please enter a number: ");
             Scanner scanner = new Scanner(System.in);
             int inputNumber = scanner.nextInt();
-            System.out.println("The added numbers are " + inputNumber);
 
-            
+            int sum =  0;
+            for (int index = 0; index <= inputNumber; index++) {
+                sum += index;
+                System.out.println("+ " + index);
+                System.out.println(sum);
+
+            }
+
           }
 
       }
