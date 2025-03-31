@@ -161,4 +161,13 @@ public class ExamService {
           System.out.println("Maximum number is: " + maxNumber);
           }
 
+          public void plusNumbers() {
+          System.out.println("Please enter a number: ");
+            Scanner scanner = new Scanner(System.in);
+            int inputNumber = scanner.nextInt();
+            System.out.println("The added numbers are " + inputNumber);
+
+            
+          }
+
       }
