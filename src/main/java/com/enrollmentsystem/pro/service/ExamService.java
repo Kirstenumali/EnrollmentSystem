@@ -166,15 +166,16 @@ public class ExamService {
             Scanner scanner = new Scanner(System.in);
             int inputNumber = scanner.nextInt();
 
-              // while loop
               int sum = 0;
               int index = 0;
               while (index <= inputNumber) {
-                  sum += index;
-                  index++;
-                  System.out.println(sum);
                   System.out.println("+ " + index);
+                  sum += index;
+                  System.out.println(sum);
+                  index++;
               }
+            }
+          }
 
             // for loop
 //            int sum =  0;
@@ -182,8 +183,3 @@ public class ExamService {
 //                sum += index;
 //                System.out.println("+ " + index);
 //                System.out.println(sum);
-
-
-            }
-
-          }
