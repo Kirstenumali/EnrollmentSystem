@@ -1,4 +1,5 @@
 package com.enrollmentsystem.pro.service;
+import com.enrollmentsystem.pro.Customer;
 import com.enrollmentsystem.pro.User;
 import com.enrollmentsystem.pro.userinterface.Menu;
 
@@ -7,8 +8,12 @@ import java.util.ArrayList;
 public class Main {
 
     public static void main(String[] args) {
-        ExamService examService = new ExamService();
-        examService.plusNumbers();
+//        ExamService examService = new ExamService();
+//        examService.plusNumbers();
+
+
+        Customer customer = new Customer();
+        customer.integrateIndentity();
 //        examService.printNumbers();
 
 //        StringUtil stringUtil = new StringUtil();
