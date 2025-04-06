@@ -1,21 +1,16 @@
 package com.enrollmentsystem.pro.service;
-import com.enrollmentsystem.pro.Customer;
-import com.enrollmentsystem.pro.User;
-import com.enrollmentsystem.pro.userinterface.Menu;
+import com.enrollmentsystem.pro.Solution;
 
-import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Main {
 
     public static void main(String[] args) {
-//        ExamService examService = new ExamService();
-//        examService.plusNumbers();
-
-
-        Customer customer = new Customer();
-        customer.integrateIndentity();
-//        examService.printNumbers();
-
-//        StringUtil stringUtil = new StringUtil();
-//        stringUtil.encodeString("In Java, to convert a string into a list of characters, we can use several methods depending on the requirements. In this article, we will learn how to convert a string to a list of characters in Java.", "a");
-    }}
+            int[] nums = {2, 7, 11, 15};
+            int target = 9;
+            Solution solution = new Solution();
+            int[] result = solution.twoSum(nums, target);
+            System.out.println("The two numbers are: " + result[0] + " and " + result[1]);
+        }
+    }
