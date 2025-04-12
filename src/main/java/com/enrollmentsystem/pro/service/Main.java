@@ -1,9 +1,6 @@
 package com.enrollmentsystem.pro.service;
 import com.enrollmentsystem.pro.Solution;
 
-import java.util.HashMap;
-import java.util.Map;
-
 public class Main {
 
     public static void main(String[] args) {
