@@ -24,7 +24,11 @@ public class Menu {
         System.out.println("You have selected the number: " + choice);
 //        checkInputValue(choice);
         if (choice.equals("1") || choice.equals("2") || choice.equals("3") || choice.equals("4")) {
-        userService.doActionOnUserGetANumber(Integer.parseInt(choice));
+            try {
+                userService.doActionOnUserGetANumber(Integer.parseInt(choice));
+            } catch (Exception e) {
+                throw new RuntimeException(e);
+            }
         } else if (choice.equals("5")) {
             System.out.println("Exiting the program...");
             scanner.close();

@@ -1,15 +1,13 @@
 package com.enrollmentsystem.pro.business;
-
 import com.enrollmentsystem.pro.User;
 import com.enrollmentsystem.pro.dataaccess.UserDao;
-
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class UserService {
     private UserDao userDao;
 
-    public void doActionOnUserGetANumber(int selectedOperationCode) {
+    public void doActionOnUserGetANumber(int selectedOperationCode) throws Exception {
         if (selectedOperationCode == 1) {
             addUser();
         } else if (selectedOperationCode == 2) {
@@ -22,7 +20,8 @@ public class UserService {
         } else if (selectedOperationCode == 5)  {
             exitUser();
         } else {
-            System.out.println("You must select 1-5 numbers");
+            // check Exception
+            throw new Exception();
         }
     }
 
@@ -89,6 +88,12 @@ public class UserService {
         if (userDao == null) {
             userDao = new UserDao();
         }
-        return userDao.getAllUser();
+        ArrayList result = userDao.getAllUser();
+        if (result.isEmpty()) {
+            // Uncheck Exception
+            throw new RuntimeException();
+        }
     }
+
+
 }
