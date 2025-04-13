@@ -1,13 +1,15 @@
 package com.enrollmentsystem.pro.business;
+
 import com.enrollmentsystem.pro.User;
 import com.enrollmentsystem.pro.dataaccess.UserDao;
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class UserService {
     private UserDao userDao;
 
-    public void doActionOnUserGetANumber(int selectedOperationCode) throws Exception {
+    public void doActionOnUserGetANumber(int selectedOperationCode) {
         if (selectedOperationCode == 1) {
             addUser();
         } else if (selectedOperationCode == 2) {
@@ -20,8 +22,7 @@ public class UserService {
         } else if (selectedOperationCode == 5)  {
             exitUser();
         } else {
-            // check Exception
-            throw new Exception();
+            System.out.println("You must select 1-5 numbers");
         }
     }
 
@@ -45,10 +46,10 @@ public class UserService {
         }
         Boolean isUserExist = userDao.userExist(newUser);
         if (isUserExist.equals(false)) {
-        System.out.println(isUserExist);
-        userDao.addUser(newUser);
-        ArrayList result = getAllRegisteredUsers();
-        System.out.println(result);
+            System.out.println(isUserExist);
+            userDao.addUser(newUser);
+            ArrayList result = getAllRegisteredUsers();
+            System.out.println(result);
         } else {
             System.out.println("Our user is in database");
         }
@@ -88,12 +89,6 @@ public class UserService {
         if (userDao == null) {
             userDao = new UserDao();
         }
-        ArrayList result = userDao.getAllUser();
-        if (result.isEmpty()) {
-            // Uncheck Exception
-            throw new RuntimeException();
-        }
+        return userDao.getAllUser();
     }
-
-
 }
