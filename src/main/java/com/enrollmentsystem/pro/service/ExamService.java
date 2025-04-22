@@ -193,31 +193,16 @@ public class ExamService {
         }
     }
 
-//    public void checkIfOdd(int number) {
-//        try {
-//            if (number % 2 != 0) {
-//                throw new IllegalArgumentException("Number is odd!");
-//            } else {
-//                System.out.println("Number is even: " + number);
-//            }
-//        } catch (IllegalArgumentException e) {
-//            System.out.println(e.getMessage());
-//        }
-//
-//    }
-
-
-    public void takeANumber() {
+    public void takeANumber() throws Exception {
         System.out.println("Please enter a number: ");
         Scanner scanner = new Scanner(System.in);
         int number = scanner.nextInt();
-        try {
+         {
             if (number % 2 != 0) {
-                throw new IllegalArgumentException("Number is odd!");
+                throw new Exception("Number is odd!");
             } else {
                 System.out.println("Number is even: " + number);
             }
-        } catch (IllegalArgumentException e) {
-            System.out.println(e.getMessage());
         }
-    }}
+    }
+}
