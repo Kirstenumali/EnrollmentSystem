@@ -1,5 +1,5 @@
-package com.enrollmentsystem.pro;
-
-public class Child extends Parent {
-
-}
+//package com.enrollmentsystem.pro;
+//
+//public class Child extends Parent {
+//
+//}
