@@ -1,13 +1,15 @@
 package com.enrollmentsystem.pro.service;
 
+import com.enrollmentsystem.pro.Practice;
+
+import java.util.ArrayList;
+
 public class Main {
 
     public static void main(String[] args) {
-        ExamService examService = new ExamService();
-        try {
-            examService.takeANumber();
-        } catch (Exception e) {
-            System.out.println("This is an exception.");
-            throw new RuntimeException(e);
-        }
+        Practice practice = new Practice();
+        ArrayList arrayList = new ArrayList();
+        arrayList.add(5);
+        arrayList.add(10);
+        practice.checkArray(arrayList);
     }}
